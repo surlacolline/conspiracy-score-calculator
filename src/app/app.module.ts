@@ -13,6 +13,8 @@ import { CoalitionScoreComponent } from './pages/coalition-score/coalition-score
 import { PearlMasterScoreComponent } from './pages/pearl-master-score/pearl-master-score.component';
 import { ListPlayerScoresComponent } from './pages/list-player-scores/list-player-scores.component';
 import { StepperScoreComponent } from './pages/stepper-score/stepper-score.component';
+import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,10 @@ import { StepperScoreComponent } from './pages/stepper-score/stepper-score.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-  ],
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    SharedModule,
+    ReactiveFormsModule
+  ], exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
