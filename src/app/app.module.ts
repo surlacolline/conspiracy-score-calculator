@@ -6,10 +6,24 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SelectPlayerComponent } from './pages/select-player/select-player.component';
+import { ColorScoreComponent } from './pages/color-score/color-score.component';
+import { LocationScoreComponent } from './pages/location-score/location-score.component';
+import { CoalitionScoreComponent } from './pages/coalition-score/coalition-score.component';
+import { PearlMasterScoreComponent } from './pages/pearl-master-score/pearl-master-score.component';
+import { ListPlayerScoresComponent } from './pages/list-player-scores/list-player-scores.component';
+import { StepperScoreComponent } from './pages/stepper-score/stepper-score.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectPlayerComponent,
+    ColorScoreComponent,
+    LocationScoreComponent,
+    CoalitionScoreComponent,
+    PearlMasterScoreComponent,
+    ListPlayerScoresComponent,
+    StepperScoreComponent
   ],
   imports: [
     BrowserModule,
