@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -12,8 +14,10 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule,
     MatStepperModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatCheckboxModule
   ],
-  exports: [MatStepperModule, MatFormFieldModule, MatInputModule]
+  exports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule]
 })
 export class MaterialModule { }
