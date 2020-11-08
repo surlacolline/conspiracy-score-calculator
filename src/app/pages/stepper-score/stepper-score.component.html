@@ -3,43 +3,36 @@
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Couleurs</ng-template>
             <app-color-score></app-color-score>
-            <mat-form-field>
-                <mat-label>Name</mat-label>
-                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-            </mat-form-field>
-            <div>
+            <!-- <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                </mat-form-field> -->
+            <!-- <div>
                 <button mat-button matStepperNext>Next</button>
-            </div>
+            </div> -->
         </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" optional>
+    <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
             <ng-template matStepLabel>Lieux</ng-template>
             <app-location-score></app-location-score>
-            <mat-form-field>
-                <mat-label>Address</mat-label>
-                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-            </mat-form-field>
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-            </div>
+
         </form>
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Coalition</ng-template>
         <app-coalition-score></app-coalition-score>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
+
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Maître des perles</ng-template>
         <app-pearl-master-score></app-pearl-master-score>
         <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-button matStepperPrevious>done</button>
+
         </div>
     </mat-step>
 </mat-vertical-stepper>
+<!-- <div id="totalscore">
+    <p>20</p>
+</div> -->

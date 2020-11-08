@@ -1,1 +1,7 @@
-<p>list-player-scores works!</p>
+<mat-form-field appearance="standard">
+    <mat-label>Ajouter un joueur</mat-label>
+    <input type="string" matInput placeholder="">
+</mat-form-field>
+
+<mat-icon (click)="addPlayer()">insert_emoticon</mat-icon>
+<app-player *ngFor="let player of players" name="player"></app-player>

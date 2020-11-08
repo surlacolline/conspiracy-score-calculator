@@ -15,6 +15,7 @@ import { ListPlayerScoresComponent } from './pages/list-player-scores/list-playe
 import { StepperScoreComponent } from './pages/stepper-score/stepper-score.component';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PlayerComponent } from './pages/player/player.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CoalitionScoreComponent,
     PearlMasterScoreComponent,
     ListPlayerScoresComponent,
-    StepperScoreComponent
+    StepperScoreComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

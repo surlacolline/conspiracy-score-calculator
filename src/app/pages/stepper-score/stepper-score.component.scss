@@ -1,3 +1,36 @@
 .mat-form-field {
     margin-top: 16px;
   }
+
+  #totalscore{
+  // border: solid;
+  background-color: aquamarine;
+  border-radius: 100px 100px 100px 100px;
+  width: 30px;
+  height:  30px;
+    right: 30px;
+    top: 30px;
+    left: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    position: absolute;
+  }
+
+  :host{
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    position: relative;
+    background-color: cadetblue;
+    height: 100%;
+ 
+
+  }
+
+  mat-vertical-stepper{
+    max-width: 500px;
+  }
+
+ 

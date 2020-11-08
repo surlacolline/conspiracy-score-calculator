@@ -37,3 +37,8 @@ $conspiracy-score-calculator-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; }
+
+mat-form-field {
+  padding-left: 20px;
+  padding-right: 20px;
+}
