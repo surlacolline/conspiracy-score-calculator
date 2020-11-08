@@ -4,4 +4,6 @@
 </mat-form-field>
 
 <mat-icon (click)="addPlayer()">insert_emoticon</mat-icon>
-<app-player *ngFor="let player of players" name="player"></app-player>
+<ng-container *ngFor="let player of players">
+    <app-player [name]="player"></app-player>
+</ng-container>

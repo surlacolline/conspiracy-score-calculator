@@ -42,3 +42,13 @@ mat-form-field {
   padding-left: 20px;
   padding-right: 20px;
 }
+body{
+  display: flex;
+   align-items: center;  
+   justify-content: center;
+  position: relative;
+  background-color: cadetblue;
+  height: 100%;
+  flex-direction: column;
+
+}

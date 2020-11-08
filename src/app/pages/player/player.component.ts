@@ -14,6 +14,6 @@ export class PlayerComponent implements OnInit {
   ngOnInit(): void {
   }
   showStepper(): void {
-    this.isShowStepper = !!this.isShowStepper;
+    this.isShowStepper = !this.isShowStepper;
   }
 }
