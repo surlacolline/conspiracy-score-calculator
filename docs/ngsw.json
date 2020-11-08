@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1604802074345,
-  "index": "=https://surlacolline.github.io/conspiracy-score-calculator/index.html",
+  "timestamp": 1604802458680,
+  "index": "=/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "=https://surlacolline.github.io/conspiracy-score-calculator/favicon.ico",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/index.html",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/main.97dd6143b6fa7aff9b83.js",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/manifest.webmanifest",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/polyfills.35a5ca1855eb057f016a.js",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/runtime.acf0dec4155e77772545.js",
-        "=https://surlacolline.github.io/conspiracy-score-calculator/styles.6f7b1ece0c98f6bf6e7b.css"
+        "=/favicon.ico",
+        "=/index.html",
+        "=/main.97dd6143b6fa7aff9b83.js",
+        "=/manifest.webmanifest",
+        "=/polyfills.35a5ca1855eb057f016a.js",
+        "=/runtime.acf0dec4155e77772545.js",
+        "=/styles.6f7b1ece0c98f6bf6e7b.css"
       ],
       "patterns": []
     },
@@ -29,21 +29,21 @@
         "ignoreVary": true
       },
       "urls": [
-        "=https://surlacolline.github.io/conspiracy-score-calculator/assets/icons/icon-144x144.png"
+        "=/assets/icons/icon-144x144.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "=https://surlacolline.github.io/conspiracy-score-calculator/assets/icons/icon-144x144.png": "225751cbce97113404e5bdeeb33d4df9b11fa8ec",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/index.html": "6dbfd89ec930d2218236ade0f6fc952aae534df2",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/main.97dd6143b6fa7aff9b83.js": "3f28312f82f9916c9318429148f47e7981812fea",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/manifest.webmanifest": "a8c9f3a2e9706bbc4a8c752a86296a3454264448",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "=https://surlacolline.github.io/conspiracy-score-calculator/styles.6f7b1ece0c98f6bf6e7b.css": "32d74b5e3a4f182e41cdd634c23ed565d6d3d8d3"
+    "=/assets/icons/icon-144x144.png": "225751cbce97113404e5bdeeb33d4df9b11fa8ec",
+    "=/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "=/index.html": "ef2e9244d537cdd1b169a11bbdc9084a80dec8de",
+    "=/main.97dd6143b6fa7aff9b83.js": "3f28312f82f9916c9318429148f47e7981812fea",
+    "=/manifest.webmanifest": "337f360f0a8e430fb254566564b87a488462cfed",
+    "=/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "=/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "=/styles.6f7b1ece0c98f6bf6e7b.css": "32d74b5e3a4f182e41cdd634c23ed565d6d3d8d3"
   },
   "navigationUrls": [
     {
