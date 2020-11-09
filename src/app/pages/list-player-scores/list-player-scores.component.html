@@ -1,9 +1,16 @@
+<h1>CONSPIRACY</h1>
+<h2>Calcul des scores</h2>
 <mat-form-field appearance="standard">
     <mat-label>Ajouter un joueur</mat-label>
     <input type="string" matInput placeholder="">
 </mat-form-field>
 
-<mat-icon (click)="addPlayer()">insert_emoticon</mat-icon>
-<ng-container *ngFor="let player of players">
-    <app-player [name]="player"></app-player>
-</ng-container>
+<a routerLink="/stepper" routerLinkActive="active">
+    <mat-icon (click)="addPlayer()">insert_emoticon</mat-icon>
+</a>
+
+<div class="box">
+    <ng-container *ngFor="let player of players">
+        <app-player [name]="player"></app-player>
+    </ng-container>
+</div>

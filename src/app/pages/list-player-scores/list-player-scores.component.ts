@@ -7,7 +7,7 @@ import { TransitionCheckState } from '@angular/material/checkbox';
   styleUrls: ['./list-player-scores.component.scss']
 })
 export class ListPlayerScoresComponent implements OnInit {
-  players: string[] = [];
+  players: string[] = ["Pierre", "Charles"];
 
   constructor() { }
 
