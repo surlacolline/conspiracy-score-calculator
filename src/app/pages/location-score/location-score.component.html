@@ -1,29 +1,35 @@
 <mat-form-field appearance="standard">
     <mat-label>lieu n°1</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu1 matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>lieu n°2</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu2 matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>lieu n°3</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu3 matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>lieu n°4</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu4 matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>lieu n°5</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu5 matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>lieu n°6</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #lieu6 matInput type="number" placeholder="score">
 </mat-form-field>
 
 <mat-form-field appearance="standard">
+    <mat-label>SOUS TOTAL</mat-label>
+    <input disabled=true matInput placeholder="Placeholder"
+        [value]="getScore(lieu1.value, lieu2.value, lieu3.value, lieu4.value, lieu5.value, lieu6.value)">
+</mat-form-field>
+<mat-form-field appearance="standard">
     <mat-label>TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder">
+    <input disabled=true matInput placeholder="Placeholder"
+        [value]="getScore(lieu1.value, lieu2.value, lieu3.value, lieu4.value, lieu5.value, lieu6.value)">
 </mat-form-field>

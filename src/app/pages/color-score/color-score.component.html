@@ -1,16 +1,16 @@
 <!-- <form> -->
 <mat-form-field appearance="standard">
     <mat-label>Rouge</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #red matInput type="number" placeholder="score">
     <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>Bleu</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #blue matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>Vert</mat-label>
-    <input matInput type="number" placeholder="score">
+    <input #green matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
     <mat-label>Violet</mat-label>
@@ -21,7 +21,13 @@
     <input matInput type="number" placeholder="score">
 </mat-form-field>
 <mat-form-field appearance="standard">
+    <mat-label>SOUS TOTAL</mat-label>
+    <input disabled=true matInput type="number" placeholder="Placeholder"
+        [value]="getScore(red.value, blue.value, green.value)">
+</mat-form-field>
+<mat-form-field appearance="standard">
     <mat-label>TOTAL</mat-label>
-    <input disabled=true matInput type="number" placeholder="Placeholder">
+    <input disabled=true matInput type="number" placeholder="Placeholder"
+        [value]="getScore(red.value, blue.value, green.value)">
 </mat-form-field>
 <!-- </form> -->
