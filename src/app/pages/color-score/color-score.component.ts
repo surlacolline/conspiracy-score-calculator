@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScoreService } from 'src/app/core/score.service';
 
 @Component({
   selector: 'app-color-score',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorScoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class ColorScoreComponent implements OnInit {
     if (score == NaN) {
       score = 0;
     }
+    this.scoreService.changeScore(score);
     return score;
   }
 
