@@ -8,7 +8,7 @@ import { IPlayer } from 'src/app/core/models/player.model';
   styleUrls: ['./list-player-scores.component.scss']
 })
 export class ListPlayerScoresComponent implements OnInit {
-  players: IPlayer[] = [{ Name: "Pierre", Score: 54 }, { Name: "Charles", Score: 10 }];
+  players: IPlayer[] = [{ name: "Pierre", score: 54 }, { name: "Charles", score: 10 }];
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class ListPlayerScoresComponent implements OnInit {
   }
 
   addPlayer(): void {
-    this.players.push({ Name: "Henri", Score: 54 });
+    this.players.push({ name: "Henri", score: 54 });
   }
 
 }

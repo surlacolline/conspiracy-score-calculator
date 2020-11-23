@@ -17,6 +17,7 @@ import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PlayerComponent } from './pages/player/player.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,7 @@ import { PlayerComponent } from './pages/player/player.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     SharedModule,
     ReactiveFormsModule
-  ], exports: [],
+  ], exports: [ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

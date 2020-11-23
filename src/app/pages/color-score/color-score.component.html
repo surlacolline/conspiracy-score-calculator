@@ -1,33 +1,31 @@
-<!-- <form> -->
-<mat-form-field appearance="standard">
-    <mat-label>Rouge</mat-label>
-    <input #red matInput type="number" placeholder="score">
-    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>Bleu</mat-label>
-    <input #blue matInput type="number" placeholder="score">
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>Vert</mat-label>
-    <input #green matInput type="number" placeholder="score">
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>Violet</mat-label>
-    <input matInput type="number" placeholder="score">
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>Jaune</mat-label>
-    <input matInput type="number" placeholder="score">
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>SOUS TOTAL</mat-label>
-    <input disabled=true matInput type="number" placeholder="Placeholder"
-        [value]="getScore(red.value, blue.value, green.value)">
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>TOTAL</mat-label>
-    <input disabled=true matInput type="number" placeholder="Placeholder"
-        [value]="getScore(red.value, blue.value, green.value)">
-</mat-form-field>
-<!-- </form> -->
+<form [formGroup]="colorScore" novalidate>
+    <mat-form-field appearance="standard">
+        <mat-label>Rouge</mat-label>
+        <input #red matInput formControlName="red" type="number" placeholder="score">
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Bleu</mat-label>
+        <input #blue matInput formControlName="blue" type="number" placeholder="score">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Vert</mat-label>
+        <input #green matInput formControlName="green" type="number" placeholder="score">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Violet</mat-label>
+        <input matInput formControlName="purple" type="number" placeholder="score">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Jaune</mat-label>
+        <input matInput formControlName="yellow" type="number" placeholder="score">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>SOUS TOTAL</mat-label>
+        <input disabled=true matInput type="number" placeholder="Placeholder" [value]="getScore()">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>TOTAL</mat-label>
+        <input disabled=true matInput type="number" placeholder="Placeholder" [value]="getScore()">
+    </mat-form-field>
+</form>

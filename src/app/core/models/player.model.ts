@@ -1,6 +1,6 @@
 export interface IPlayer {
-    Name: string,
-    Score: number
+    name: string,
+    score: number,
 };
 
 export interface IPlayers {
