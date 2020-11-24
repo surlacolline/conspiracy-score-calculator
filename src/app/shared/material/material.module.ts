@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 
@@ -17,8 +18,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatChipsModule
   ],
-  exports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule]
+  exports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule, MatChipsModule]
 })
 export class MaterialModule { }

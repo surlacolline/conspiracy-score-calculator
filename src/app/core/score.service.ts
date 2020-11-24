@@ -11,9 +11,10 @@ export class ScoreService {
   private colorScore = 0;
   private locationScore = 0;
   private coalitionScore = 0;
+  private pearlMasterScore = 0;
 
   get totalScore(): number {
-    return this.colorScore + this.locationScore + this.coalitionScore;
+    return this.colorScore + this.locationScore + this.coalitionScore + this.pearlMasterScore;
   }
 
   constructor() { }
@@ -32,6 +33,11 @@ export class ScoreService {
 
   public changeCoalitionScore(score: number) {
     this.coalitionScore = score;
+    this.score.next(this.totalScore);
+  }
+
+  public changePearlMasterScore(score: number) {
+    this.pearlMasterScore = score;
     this.score.next(this.totalScore);
   }
 }

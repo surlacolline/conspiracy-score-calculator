@@ -1,12 +1,8 @@
-<mat-checkbox class="example-margin">Maitre des perles?</mat-checkbox>
-<p>x 5</p>
-<mat-form-field appearance="standard">
-    <mat-label>SOUS TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-</mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-</mat-form-field>
+<mat-checkbox #isMaster (change)="getScore($event)" class="example-margin">Maitre des perles?</mat-checkbox>
+<br>
+<mat-chip-list>
+    <mat-chip [color]="getColor()"> + 5 </mat-chip>
+</mat-chip-list>
+<br>
+
+<app-score-input></app-score-input>
