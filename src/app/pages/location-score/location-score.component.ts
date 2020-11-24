@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ScoreService } from 'src/app/core/score.service';
 
 @Component({
   selector: 'app-location-score',
@@ -6,19 +8,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-score.component.scss']
 })
 export class LocationScoreComponent implements OnInit {
-
-  constructor() { }
+  locationScore: FormGroup;
+  scoreTotal: number;
+  constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
+    this.locationScore = this.createFormGroup();
   }
 
-  getScore(l1: string, l2: string, l3: string, l4: string, l5: string, l6: string): number {
+  createFormGroup() {
+    return new FormGroup({
+      location1: new FormControl(0, Validators.max(20)),
+      location2: new FormControl(0, Validators.max(20)),
+      location3: new FormControl(0, Validators.max(20)),
+      location4: new FormControl(0, Validators.max(20)),
+      location5: new FormControl(0, Validators.max(20)),
+      location6: new FormControl(0, Validators.max(20)),
+    });
+  }
 
-    let n1 = parseInt(l1, 10) || 0;
-    let n2 = parseInt(l2, 10) || 0;
-    let n3 = parseInt(l3, 10) || 0;
-    let score = 0;
-    score = n1 + n2 + n3;
+  getScore(): number {
+
+    let score = this.locationScore.controls['location1'].value +
+      this.locationScore.controls['location2'].value +
+      this.locationScore.controls['location3'].value +
+      this.locationScore.controls['location4'].value +
+      this.locationScore.controls['location5'].value +
+      this.locationScore.controls['location6'].value;
+
+    this.scoreService.changeLocationScore(score);
+    return score;
 
     return score;
   }

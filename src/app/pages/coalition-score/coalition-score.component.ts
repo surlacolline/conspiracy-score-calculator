@@ -13,4 +13,10 @@ export class CoalitionScoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getScore(value: number): number {
+    const score = value * 3;
+    this.scoreService.changeCoalitionScore(score);
+    return score;
+  }
+
 }

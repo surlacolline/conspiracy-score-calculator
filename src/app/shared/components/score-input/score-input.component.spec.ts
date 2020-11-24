@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepperComponent } from './stepper.component';
+import { ScoreInputComponent } from './score-input.component';
 
-describe('StepperComponent', () => {
-  let component: StepperComponent;
-  let fixture: ComponentFixture<StepperComponent>;
+describe('ScoreInputComponent', () => {
+  let component: ScoreInputComponent;
+  let fixture: ComponentFixture<ScoreInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepperComponent ]
+      declarations: [ ScoreInputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepperComponent);
+    fixture = TestBed.createComponent(ScoreInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

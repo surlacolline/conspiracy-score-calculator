@@ -13,6 +13,7 @@ export class ColorScoreComponent implements OnInit {
   constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
+
     this.colorScore = this.createFormGroup();
   }
   createFormGroup() {
@@ -32,7 +33,7 @@ export class ColorScoreComponent implements OnInit {
       this.colorScore.controls['green'].value +
       this.colorScore.controls['purple'].value;
 
-    this.scoreService.changeScore(score);
+    this.scoreService.changeColorScore(score);
     return score;
   }
 

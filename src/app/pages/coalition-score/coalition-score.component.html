@@ -6,9 +6,6 @@
 
 <mat-form-field appearance="standard">
     <mat-label>SOUS TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder" [value]="coalitionNb.value * 3">
+    <input disabled=true matInput placeholder="Placeholder" [value]="getScore(+coalitionNb.value)">
 </mat-form-field>
-<mat-form-field appearance="standard">
-    <mat-label>TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder" [value]="coalitionNb.value * 3">
-</mat-form-field>
+<app-score-input></app-score-input>

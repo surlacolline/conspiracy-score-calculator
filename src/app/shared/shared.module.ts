@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StepperComponent } from './components/stepper/stepper.component';
 import { MaterialModule } from './material/material.module';
+import { ScoreInputComponent } from './components/score-input/score-input.component';
 
 
 
 @NgModule({
-  declarations: [StepperComponent],
+  declarations: [ScoreInputComponent],
   imports: [
     CommonModule,
     MaterialModule
   ],
   exports: [
-    MaterialModule
+    MaterialModule,
+    ScoreInputComponent
   ]
 })
 export class SharedModule { }

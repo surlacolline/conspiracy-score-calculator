@@ -24,8 +24,6 @@
         <mat-label>SOUS TOTAL</mat-label>
         <input disabled=true matInput type="number" placeholder="Placeholder" [value]="getScore()">
     </mat-form-field>
-    <mat-form-field appearance="standard">
-        <mat-label>TOTAL</mat-label>
-        <input disabled=true matInput type="number" placeholder="Placeholder" [value]="getScore()">
-    </mat-form-field>
+    <app-score-input></app-score-input>
+
 </form>
