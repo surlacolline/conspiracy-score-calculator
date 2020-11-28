@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from 'src/app/core/models/player.model';
 import { ScoreService } from 'src/app/core/score.service';
 
 @Component({
@@ -7,11 +8,19 @@ import { ScoreService } from 'src/app/core/score.service';
   styleUrls: ['./score-input.component.scss']
 })
 export class ScoreInputComponent implements OnInit {
-  scoreTotal: number;
+
+  currentPlayer: Player;
+  scoreTotal = 0;
   constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
-    this.scoreService.currentScore.subscribe((score: number) => this.scoreTotal = score);
+    this.scoreService.currentScore.subscribe((currentPlayer: Player) => {
+
+      this.currentPlayer = currentPlayer;
+      this.scoreTotal = this.currentPlayer?.score?.totalScore;
+    }
+    );
   }
+
 
 }

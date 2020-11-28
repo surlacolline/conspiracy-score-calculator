@@ -1,6 +1,7 @@
-<h1>{{player?.name}}: {{player?.score}} points <a routerLink="/stepper" routerLinkActive="active">
-        <mat-icon>edit</mat-icon>
-    </a></h1>
+<h1>{{player?.name}}: {{score}} points
+    <mat-icon (click)="isShowStepper = true">edit</mat-icon>
+</h1>
 <!-- <p (click)="showStepper()">Ajouter score</p> -->
-
-<app-stepper-score *ngIf="isShowStepper"></app-stepper-score>
+<div *ngIf="isShowStepper" class="modal">
+    <app-stepper-score [player]="player" (stepperDoneEvent)="isStepperDone()"></app-stepper-score>
+</div>

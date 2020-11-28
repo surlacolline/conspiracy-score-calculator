@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TransitionCheckState } from '@angular/material/checkbox';
-import { IPlayer } from 'src/app/core/models/player.model';
+import { Player } from 'src/app/core/models/player.model';
+import { Score } from 'src/app/core/models/score.model';
 
 @Component({
   selector: 'app-list-player-scores',
@@ -8,7 +9,7 @@ import { IPlayer } from 'src/app/core/models/player.model';
   styleUrls: ['./list-player-scores.component.scss']
 })
 export class ListPlayerScoresComponent implements OnInit {
-  players: IPlayer[] = [{ name: "Pierre", score: 54 }, { name: "Charles", score: 10 }];
+  players: Player[] = [{ name: "Pierre", score: new Score() }, { name: "Charles", score: new Score() }];
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class ListPlayerScoresComponent implements OnInit {
   }
 
   addPlayer(): void {
-    this.players.push({ name: "Henri", score: 54 });
+    this.players.push({ name: "Henri", score: new Score() });
   }
 
 }

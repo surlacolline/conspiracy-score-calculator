@@ -1,4 +1,4 @@
-<h1>{{name}}</h1>
+<h1>{{player.name}}</h1>
 <mat-vertical-stepper labelPosition="bottom" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
@@ -28,13 +28,14 @@
     <mat-step>
         <ng-template matStepLabel>Maître des perles</ng-template>
         <app-pearl-master-score></app-pearl-master-score>
+        <div>
 
+            <mat-icon (click)="doneClicked()">done</mat-icon>
+
+
+        </div>
     </mat-step>
 </mat-vertical-stepper>
 <!-- <div id="totalscore">
     <p>20</p>
 </div> -->
-<div>
-    <a routerLink="/" routerLinkActive="active">Done</a>
-
-</div>

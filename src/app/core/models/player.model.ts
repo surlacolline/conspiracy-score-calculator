@@ -1,8 +1,11 @@
-export interface IPlayer {
-    name: string,
-    score: number,
+import { Iscore } from './score.model';
+
+export class Player {
+    name: string;
+    score: Iscore;
 };
 
 export interface IPlayers {
-    Players: IPlayer[];
+    Players: Player[];
 }
+

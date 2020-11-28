@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { IPlayer } from 'src/app/core/models/player.model';
+import { Player } from 'src/app/core/models/player.model';
+import { Score } from 'src/app/core/models/score.model';
 import { ScoreService } from 'src/app/core/score.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ScoreService } from 'src/app/core/score.service';
   providers: [ScoreService]
 })
 export class PlayerComponent implements OnInit {
-  @Input() player: IPlayer;
+  @Input() player: Player;
   isShowStepper = false;
   score: number;
 
@@ -19,17 +20,25 @@ export class PlayerComponent implements OnInit {
   constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
-    if (!this.player) {
-      this.player = { name: "pa", score: 0 };
-    }
 
 
-    this.scoreService.currentScore.subscribe(score => this.player.score = score);
+    this.scoreService.changeScore(this.player);
+
+    this.scoreService.currentScore.subscribe(player => {
+      this.player = player;
+      this.score = this.player.score.totalScore;
+    });
   }
 
 
 
   showStepper(): void {
     this.isShowStepper = !this.isShowStepper;
+  }
+  isStepperDone(player: Player) {
+    debugger
+    // this.player = player;
+    this.isShowStepper = false;
+
   }
 }

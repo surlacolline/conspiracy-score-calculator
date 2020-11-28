@@ -1,43 +1,26 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Player } from './models/player.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScoreService {
-  private score = new BehaviorSubject<number>(0);
-  currentScore = this.score.asObservable();
+  private player = new BehaviorSubject<Player>(new Player());
+  currentScore = this.player.asObservable();
 
-  private colorScore = 0;
-  private locationScore = 0;
-  private coalitionScore = 0;
-  private pearlMasterScore = 0;
 
-  get totalScore(): number {
-    return this.colorScore + this.locationScore + this.coalitionScore + this.pearlMasterScore;
+
+
+  constructor() {
+
   }
 
-  constructor() { }
 
 
+  public changeScore(player: Player) {
 
-  public changeColorScore(score: number) {
-    this.colorScore = score;
-    this.score.next(this.totalScore);
+    this.player.next(player);
   }
 
-  public changeLocationScore(score: number) {
-    this.locationScore = score;
-    this.score.next(this.totalScore);
-  }
-
-  public changeCoalitionScore(score: number) {
-    this.coalitionScore = score;
-    this.score.next(this.totalScore);
-  }
-
-  public changePearlMasterScore(score: number) {
-    this.pearlMasterScore = score;
-    this.score.next(this.totalScore);
-  }
 }

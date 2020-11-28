@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { Player } from 'src/app/core/models/player.model';
 import { ScoreService } from 'src/app/core/score.service';
 
 @Component({
@@ -8,21 +9,26 @@ import { ScoreService } from 'src/app/core/score.service';
   styleUrls: ['./pearl-master-score.component.scss']
 })
 export class PearlMasterScoreComponent implements OnInit {
+  @Input() player: Player;
   isMaster: boolean = false;
+  currentPlayer: Player;
 
   constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
+    this.scoreService.currentScore.subscribe(player => this.currentPlayer = player);
   }
 
   getScore(isMaster: MatCheckboxChange): number {
 
     if (isMaster.checked) {
-      this.scoreService.changePearlMasterScore(5);
+      this.currentPlayer.score.isMaster = true;
+      this.scoreService.changeScore(this.currentPlayer);
       this.isMaster = true;
       return 5;
     }
-    this.scoreService.changePearlMasterScore(0);
+    this.currentPlayer.score.isMaster = false
+    this.scoreService.changeScore(this.currentPlayer);
     this.isMaster = false;
     return 0;
 
