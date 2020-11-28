@@ -16,8 +16,8 @@ export class ListPlayerScoresComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addPlayer(): void {
-    this.players.push({ name: "Henri", score: new Score() });
+  addPlayer(name: string): void {
+    this.players.push({ name: name, score: new Score() });
   }
 
 }

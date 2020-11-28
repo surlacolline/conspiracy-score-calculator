@@ -14,13 +14,13 @@ export interface Iscore {
 }
 
 export class Score implements Iscore {
-    blue: number = 1;
-    red: number = 1;
-    green: number = 1;
-    yellow: number = 1;
-    purple: number = 1;
+    blue: number = 0;
+    red: number = 0;
+    green: number = 0;
+    yellow: number = 0;
+    purple: number = 0;
     location: number[] = [0, 0, 0, 0, 0, 0];
-    coalition: number = 1;
+    coalition: number = 0;
     isMaster: boolean = false;
 
     get colorScore(): number {
