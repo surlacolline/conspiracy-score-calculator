@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
+import { NgModule } from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 
@@ -19,8 +20,10 @@ import { MatChipsModule } from '@angular/material/chips';
     MatInputModule,
     MatIconModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSelectModule
   ],
-  exports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule, MatChipsModule]
+  exports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule, MatChipsModule,
+    MatSelectModule]
 })
 export class MaterialModule { }

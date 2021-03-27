@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Player } from 'src/app/core/models/player.model';
 import { ScoreService } from 'src/app/core/score.service';
 
@@ -24,18 +24,18 @@ export class ColorScoreComponent implements OnInit {
 
       this.currentPlayer = player;
     });
-    this.colorScore.valueChanges.subscribe(x => {
+    this.colorScore.valueChanges.subscribe(() => {
 
       this.getScore();
     });
   }
   createFormGroup() {
     return new FormGroup({
-      blue: new FormControl(1, [Validators.min(1), Validators.max(6)]),
-      red: new FormControl(1, [Validators.min(1), Validators.max(6)]),
-      yellow: new FormControl(1, [Validators.min(1), Validators.max(6)]),
-      green: new FormControl(1, [Validators.min(1), Validators.max(6)]),
-      purple: new FormControl(1, [Validators.min(1), Validators.max(6)]),
+      blue: new FormControl(1),
+      red: new FormControl(1),
+      yellow: new FormControl(1),
+      green: new FormControl(1),
+      purple: new FormControl(1),
     });
   }
   getScore(): number {
@@ -43,11 +43,12 @@ export class ColorScoreComponent implements OnInit {
     if (!this.currentPlayer?.score) {
       return 0;
     }
-    this.currentPlayer.score.blue = this.colorScore.controls['blue'].value as number;
-    this.currentPlayer.score.red = (this.colorScore.controls['red'].value as number);
-    this.currentPlayer.score.yellow = (this.colorScore.controls['yellow'].value as number);
-    this.currentPlayer.score.green = (this.colorScore.controls['green'].value as number);
-    this.currentPlayer.score.purple = (this.colorScore.controls['purple'].value as number);
+
+    this.currentPlayer.score.blue = +this.colorScore.controls['blue'].value as number;
+    this.currentPlayer.score.red = +this.colorScore.controls['red'].value as number;
+    this.currentPlayer.score.yellow = +this.colorScore.controls['yellow'].value as number;
+    this.currentPlayer.score.green = +this.colorScore.controls['green'].value as number;
+    this.currentPlayer.score.purple = +this.colorScore.controls['purple'].value as number;
 
     this.scoreService.changeScore(this.currentPlayer);
     return this.currentPlayer.score.colorScore;

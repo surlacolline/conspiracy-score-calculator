@@ -1,11 +1,11 @@
 <mat-form-field appearance="standard">
-    <mat-label>Coalition</mat-label>
-    <input #coalitionNb type="number" matInput placeholder="nombre d'alliés">
+    <mat-label>Nombre d'alliés</mat-label>
+    <input #coalitionNb type="number" matInput>
 </mat-form-field>
 <p>x 3</p>
 
 <mat-form-field appearance="standard">
     <mat-label>SOUS TOTAL</mat-label>
-    <input disabled=true matInput placeholder="Placeholder" [value]="getScore(+coalitionNb.value)">
+    <input disabled=true matInput [value]="getScore(+coalitionNb.value)">
 </mat-form-field>
 <app-score-input></app-score-input>
