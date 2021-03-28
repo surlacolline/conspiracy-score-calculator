@@ -1,12 +1,17 @@
 <form [formGroup]="locationScore" novalidate>
-    <mat-form-field appearance="standard">
-        <mat-label>lieu n°1</mat-label>
-        <input #lieu1 formControlName="location1" matInput type="number" placeholder="score">
-    </mat-form-field>
-    <mat-form-field appearance="standard">
-        <mat-label>lieu n°2</mat-label>
-        <input #lieu2 formControlName="location3" matInput type="number" placeholder="score">
-    </mat-form-field>
+    <div class="u-d-flex">
+        <mat-form-field appearance="standard">
+            <mat-label>lieu n°1</mat-label>
+            <input #lieu1 formControlName="location1" matInput type="number" placeholder="score">
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>lieu n°2</mat-label>
+            <input #lieu2 formControlName="location3" matInput type="number" placeholder="score">
+        </mat-form-field>
+
+    </div>
+
+    <div class="u-d-flex">
     <mat-form-field appearance="standard">
         <mat-label>lieu n°3</mat-label>
         <input #lieu3 formControlName="location3" matInput type="number" placeholder="score">
@@ -15,6 +20,8 @@
         <mat-label>lieu n°4</mat-label>
         <input #lieu4 formControlName="location4" matInput type="number" placeholder="score">
     </mat-form-field>
+</div>
+<div class="u-d-flex">
     <mat-form-field appearance="standard">
         <mat-label>lieu n°5</mat-label>
         <input #lieu5 formControlName="location5" matInput type="number" placeholder="score">
@@ -23,7 +30,7 @@
         <mat-label>lieu n°6</mat-label>
         <input #lieu6 formControlName="location6" matInput type="number" placeholder="score">
     </mat-form-field>
-
+</div>
     <mat-form-field appearance="standard">
         <mat-label>SOUS TOTAL</mat-label>
         <input disabled=true matInput placeholder="Placeholder" [value]="getScore()">

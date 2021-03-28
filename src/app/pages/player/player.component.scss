@@ -9,12 +9,11 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
     height: 80vh;
     width: fit-content;
+    max-width: 95vw;
     overflow: auto;
     background-color: white;
-    padding: 3rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
     z-index: 10;
